@@ -6,7 +6,7 @@
   "scripts": {
     "main": "\"\""
   },
-  "bin":"bin/fitsum",
+  "bin":{"fitsum": "bin/fitsum"},
   "repository": {
     "type": "git",
     "url": "https://github.com/fitsum/fitsum"
