@@ -9,5 +9,5 @@ Fitsum
 npm i -g fitsum
 
 ##TODOs and Info##
-  [Here](wiki), if any	
+  [Here](../../wiki), if any	
 
