@@ -16,5 +16,8 @@
     "fitsum"
   ],
   "author": "@fitsum",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }

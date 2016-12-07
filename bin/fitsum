@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+
+var program = require('commander');
+
+
+
+console.log("===============================");
+console.log("                               ");
+console.log("   Fitsum                      ");
+console.log("                               ");
+console.log("===============================");
+console.log("                               ");
+console.log("                               ");
+console.log("  born: 12/02/1969             ");
+console.log("  height: 5'8\"                ");
+console.log("  weight: 165lbs               ");
+console.log("  hair: black                  ");
+console.log("  eyes: brown                  ");
+console.log("  other: tattoos               ");
+console.log("                               ");
+
+
+program.parse(process.argv);
+
