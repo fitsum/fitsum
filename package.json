@@ -4,8 +4,9 @@
   "description": "Lorem Fitsum",
   "main": "index.js",
   "scripts": {
-    "test": "\"\""
+    "main": "\"\""
   },
+  "bin":"bin/fitsum",
   "repository": {
     "type": "git",
     "url": "https://github.com/fitsum/fitsum"
