@@ -1,13 +1,11 @@
-Fitsum
-=======
+#Fitsum
 
+##About
+"(Eventually) everything you'll ever need to know"
 
-##About##
-"(Eventually) everything you need to know"
+##How to
+`npm i -g fitsum && fitsum`
 
-##How to##
-npm i -g fitsum
-
-##TODOs and Info##
+##TODOs and Info
   [Here](../../wiki), if any	
 
