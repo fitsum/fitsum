@@ -1,0 +1,25 @@
+{
+	"bio": { 
+		"dob": "12/02/1969", 
+		"pob": "Addis Abeba", 
+		"citizenship": "USA", 
+		"previous": "Ethiopia", 
+		"website": "http://fitsum.com" 
+	}, 
+	"vitals": { 
+		"weight": "165lb", 
+		"height": "5ft 8in", 
+		"hair": "blk", 
+		"eyes": "brn", 
+		"ethnicity": "blk" 
+	}, 
+	"cv": { 
+		"blurb": "Creative technologist", 
+		"resume": "http://fitsum.com/cv/", 
+		"current": { 
+				"employer": "Concept Solutions", 
+				"title": "Software Developer" 
+		} 
+	}
+}
+
