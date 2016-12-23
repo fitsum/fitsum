@@ -56,6 +56,10 @@ p.parse( process.argv )
 
 console.log( splash )
 
+splash.data.forEach( function ( e, i, a ) {
+  console.log( e )
+} )
+
 if ( p.args.length < 1 ) {
   p.help()
 }
