@@ -1,17 +1,17 @@
 {
 	"bio": { 
-		"dob": "12/02/1969", 
-		"pob": "Addis Abeba", 
-		"citizenship": "USA", 
-		"previous": "Ethiopia", 
+		"dob": {"date of birth": "12/02/1969"}, 
+		"pob": {"place of birth": "Addis Abeba"}, 
+		"citizenship": {"country of citizenship": "USA"}, 
+		"previous": {"previous country of citizenship": "Ethiopia"}, 
 		"website": "http://fitsum.com" 
 	}, 
 	"vitals": { 
 		"weight": "165lb", 
 		"height": "5ft 8in", 
-		"hair": "blk", 
-		"eyes": "brn", 
-		"ethnicity": "blk" 
+		"hair": "black", 
+		"eyes": "brown", 
+		"ethnicity": "black" 
 	}, 
 	"cv": { 
 		"blurb": "Creative technologist", 
