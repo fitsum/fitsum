@@ -1,58 +1,64 @@
 #!/usr/bin/env node
 
-
-var d = require('../data.json'),
-	p = require('commander');
-
-
-
-                                                           
-//console.log("====================================================================================");
-//console.log("                                                                                    ");
-//console.log("                                                                                    ");
-//console.log("    .....             .         s       .x+=:.                                      ");
-//console.log(" .H8888888x.  '`+    @88>      :8      z`    ^%                                     ");
-//console.log(":888888888888x.  !   %8P      .88         .   <k    x.    .        ..    .     :    ");
-//console.log("8~    ` *88888888     .      :888ooo    .@8Ned8'  .@88k  z88u    .888: x888  x888.  ");
-//console.log("!      .  `f        .@88u  -*8888888  .@^%8888   ~ 8888 ^8888   ~`8888~'888X`?888f` ");
-//console.log(" ~:...-` :8L <)88:   888E`   8888    x88:  `)8b.   8888  888R     X888  888X '888>  ");
-//console.log("    .   :888:>X88!   888E    8888    8888N=*8888   8888  888R     X888  888X '888>  ");
-//console.log(" :~ 88x 48888X ^`    888E    8888     %8'    R88   8888  888R     X888  888X '888>  ");
-//console.log("<  :888k 88888X      888E   .8888Lu=   @8Wou 9%    8888 ,888B .   X888  888X '888>  ");
-//console.log("  d8888f  88888X     888&   ^%888*   .888888P`     8888Y 8888     *88%  *88' '888!` ");
-//console.log(" :8888!    ?8888>    R888      Y    `    ^F       `Y     YP       `~         `'`    ");
-//console.log(" X888!      8888~                                                                   ");
-//console.log(" '888       X88f                                                                    ");
-//console.log("  '%8:     .8*'                                                                     ");
-//console.log("     ^----~'`                                                                       ");
-//console.log("                                                                                    ");
-//console.log("                                                                                    ");
-//console.log(" ");
-//console.log(" ");
-//console.log("_____________________________________________________________________________________ ");
-//console.log(" ");
-
-
+// prop
+// - value
+// - long name
+// - template
+// 	- single line
+//  - full paragraph
 
 
 var d = require('../data.json'),
-	splash = require('../data.splash.gothic.json'),
-	p = require('commander');
+	p = require('commander'),
+	splash = require('../data.splash.gothic.json');
+
+
+padder = function(count){
+	for(i = 0; i < count; i++){
+		console.log("");
+	}
+}
+
+
+logger = function(command, param){
+
+
+	//check for undefined param
+	
+	//for prosey outpout
+
+	opts = {
+		"undefined" : d[command],
+		"string"    : d[command][param]
+	};
+
+
+
+	paramName = typeof d[command][param] == "object" ? Object.keys(d[command][param]).toString() : param;
+
+	result = typeof opts[typeof param] == "object" ? opts[typeof param][Object.keys(opts[typeof param])].toString(): opts[typeof param]
+
+
+	padder(2);
+	console.log("Fitsum's", paramName, "is", result);
+	padder(3);
+}
 
 
 p
- .command("vitals")
+ .command("vitals [sign]")
  .description("Show Fitsum's vital signs")
  .usage("Lists Fitsum's vital signs")
- .action(function(){
-		console.log("vitals:", d.vitals);
-	})
+ .action(function(sign){
+	logger("vitals", sign);
+ })
+
 p
- .command("bio")
+ .command("bio [entry]")
  .description("Show Fitsum's biographical information")
  .usage("Lists Fitsum's biographical information")
- .action(function(){
-		console.log("bio:", d.bio);
+ .action(function(entry){
+		logger("bio", entry);
 	})
 
 p
@@ -63,7 +69,6 @@ p
 		//console.log("cv:", d.cv);
 	})
 
-p.parse(process.argv);
 
 
 splash.data.forEach(function(e, i, a){
@@ -71,9 +76,10 @@ splash.data.forEach(function(e, i, a){
 });
 
 
+p.parse(process.argv);
+
 if(p.args.length < 1){
   p.help()
 }
-
 
 
