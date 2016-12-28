@@ -63,3 +63,8 @@ splash.data.forEach( function ( e, i, a ) {
 if ( p.args.length < 1 ) {
   p.help()
 }
+p.parse( process.argv )
+
+if ( p.args.length < 1 ) {
+  p.help()
+}
