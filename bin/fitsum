@@ -1,54 +1,61 @@
 #!/usr/bin/env node
 
-const program = require( 'commander' )
+// console.log("====================================================================================");
+// console.log("                                                                                    ");
+// console.log("                                                                                    ");
+// console.log("    .....             .         s       .x+=:.                                      ");
+// console.log(" .H8888888x.  '`+    @88>      :8      z`    ^%                                     ");
+// console.log(":888888888888x.  !   %8P      .88         .   <k    x.    .        ..    .     :    ");
+// console.log("8~    ` *88888888     .      :888ooo    .@8Ned8'  .@88k  z88u    .888: x888  x888.  ");
+// console.log("!      .  `f        .@88u  -*8888888  .@^%8888   ~ 8888 ^8888   ~`8888~'888X`?888f` ");
+// console.log(" ~:...-` :8L <)88:   888E`   8888    x88:  `)8b.   8888  888R     X888  888X '888>  ");
+// console.log("    .   :888:>X88!   888E    8888    8888N=*8888   8888  888R     X888  888X '888>  ");
+// console.log(" :~ 88x 48888X ^`    888E    8888     %8'    R88   8888  888R     X888  888X '888>  ");
+// console.log("<  :888k 88888X      888E   .8888Lu=   @8Wou 9%    8888 ,888B .   X888  888X '888>  ");
+// console.log("  d8888f  88888X     888&   ^%888*   .888888P`     8888Y 8888     *88%  *88' '888!` ");
+// console.log(" :8888!    ?8888>    R888      Y    `    ^F       `Y     YP       `~         `'`    ");
+// console.log(" X888!      8888~                                                                   ");
+// console.log(" '888       X88f                                                                    ");
+// console.log("  '%8:     .8*'                                                                     ");
+// console.log("     ^----~'`                                                                       ");
+// console.log("                                                                                    ");
+// console.log("                                                                                    ");
+// console.log(" ");
+// console.log(" ");
+// console.log("_____________________________________________________________________________________ ");
+// console.log(" ");
 
-console.log( '                                                                                    ' )
-console.log( '                                                                                    ' )
-console.log( '                                                                                    ' )
-console.log( '                                                                                    ' )
-console.log( '====================================================================================' )
-console.log( '                                                                                    ' )
-console.log( '                                                                                    ' )
-console.log( '    .....             .         s       .x+=:.                                      ' )
-console.log( " .H8888888x.  '`+    @88>      :8      z`    ^%                                     " )
-console.log( ':888888888888x.  !   %8P      .88         .   <k    x.    .        ..    .     :    ' )
-console.log( "8~    ` *88888888     .      :888ooo    .@8Ned8'  .@88k  z88u    .888: x888  x888.  " )
-console.log( "!      .  `f        .@88u  -*8888888  .@^%8888   ~ 8888 ^8888   ~`8888~'888X`?888f` " )
-console.log( " ~:...-` :8L <)88:   888E`   8888    x88:  `)8b.   8888  888R     X888  888X '888>  " )
-console.log( "    .   :888:>X88!   888E    8888    8888N=*8888   8888  888R     X888  888X '888>  " )
-console.log( " :~ 88x 48888X ^`    888E    8888     %8'    R88   8888  888R     X888  888X '888>  " )
-console.log( "<  :888k 88888X      888E   .8888Lu=   @8Wou 9%    8888 ,888B .   X888  888X '888>  " )
-console.log( "  d8888f  88888X     888&   ^%888*   .888888P`     8888Y 8888     *88%  *88' '888!` " )
-console.log( " :8888!    ?8888>    R888      Y    `    ^F       `Y     YP       `~         `'`    " )
-console.log( ' X888!      8888~                                                                   ' )
-console.log( " '888       X88f                                                                    " )
-console.log( "  '%8:     .8*'                                                                     " )
-console.log( "     ^----~'`                                                                       " )
-console.log( '                                                                                    ' )
-console.log( '                                                                                    ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( "                DOB: 12/02/1969             HEIGHT: 5'8\"             " )
-console.log( '                POB: Addis Abeba            WEIGHT: 165                ' )
-console.log( '                CITIZENSHIP: USA            ETHNICITY: BLK            ' )
-console.log( '                PREVIOUS: Ethiopia          HAIR: BLK                  ' )
-console.log( '                OTHER/MISC: fitsum.com      EYES: BRN                  ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( '_____________________________________________________________________________________ ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( ' ' )
-console.log( ' ' )
+const d = require( '../data.json' )
+const splash = require( '../data.splash.gothic.json' )
+const p = require( 'commander' )
 
-console.log( ' ' )
+p
+  .command( 'vitals' )
+  .description( "Show Fitsum's vital signs" )
+  .usage( "Lists Fitsum's vital signs" )
+  .action( function () {
+    console.log( 'vitals:', d.vitals )
+  } )
+p
+  .command( 'bio' )
+  .description( "Show Fitsum's biographical information" )
+  .usage( "Lists Fitsum's biographical information" )
+  .action( function () {
+    console.log( 'bio:', d.bio )
+  } )
 
-console.log( ' ' )
+p
+  .command( 'cv' )
+  .description( "Show Fitsum's curriculum vitae" )
+  .usage( "Lists Fitsum's curriculum vitae" )
+  .action( function () {
+    // console.log("cv:", d.cv);
+  } )
 
-program.parse( process.argv )
+p.parse( process.argv )
+
+console.log( splash )
+
+if ( p.args.length < 1 ) {
+  p.help()
+}
