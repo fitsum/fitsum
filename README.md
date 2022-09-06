@@ -1,11 +1,18 @@
-#Fitsum
+# Fitsum
+- (Eventually) everything you'll ever need to know
+- `npm i -g fitsum && fitsum`
 
-##About
-"(Eventually) everything you'll ever need to know"
+## TODO MVP
+- todo/re-org
+- todo/app
 
-##How to
-`npm i -g fitsum && fitsum`
+## TODO RE-ORG
+- review TODOs + move here
+- review wiki
 
-##TODOs and Info
-  [Here](../../wiki), if any	
+## TODO APP
+- zero dependency possible?
+- use console overlog
 
+## TODOs and Info
+  [Here](../../wiki), if any
