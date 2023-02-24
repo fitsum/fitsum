@@ -3,16 +3,30 @@
 - `npm i -g fitsum && fitsum`
 
 ## TODO MVP
-- todo/re-org
-- todo/app
+- TODO APP
+- TODO CONTENT
+- TODO API-SERVICE
 
-## TODO RE-ORG
-- review TODOs + move here
-- review wiki
+## TODO POST-MVP
+- zero dependency possible?
 
 ## TODO APP
-- zero dependency possible?
-- use console overlog
+- features
+  - dope cli
+  - REST server
+  - voice input
+  - use datastore
+  - use voice?
+- cull old TODOs  [Here](../../wiki), if any
 
-## TODOs and Info
-  [Here](../../wiki), if any
+## TODO-CONTENT
+- biological timeline
+  - running age calc
+- link to cv (via emailed passlink (REST service))
+- ASCII 'portrait'
+
+## TODO API-SERVICE
+- bio timeline
+  - filter year
+  - filter place
+  - current age
